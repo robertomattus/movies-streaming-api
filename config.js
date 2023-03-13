@@ -15,12 +15,12 @@ const configs = {
     },
     db: {
         development: {
-            dialect: 'postgres',
-            host: 'localhost', 
-            port: 5432,
-            username: 'postgres',
-            password: 'cacadeperro113',
-            database: 'movie-db',
+            dialect: process.env.DIALECT,
+            host: process.env.LOCAL_DB_HOST, 
+            port: process.env.LOCAL_DB_PORT,
+            username: process.env.LOCAL_DB_USERNAME,
+            password: process.env.LOCAL_DB_PASSWORD,
+            database: process.env.LOCAL_DB_NAME,
             define: {
                 timestamps: true, 
                 underscored: true,
@@ -28,7 +28,7 @@ const configs = {
             }
         },
         production: {
-            dialect: 'postgres',
+            dialect: process.env.DIALECT,
             host: process.env.DB_HOST,
             port: process.env.DB_PORT,
             username: process.env.DB_USER,
@@ -47,12 +47,12 @@ const configs = {
             }
         },
         testing: {
-            dialect: 'postgres',
-            host: 'localhost',
-            port: 5432,
-            username: 'postgres',
-            password: 'cacadeperro113',
-            database: 'movie-db',
+            dialect: process.env.DIALECT,
+            host: process.env.LOCAL_DB_HOST,
+            port: process.env.LOCAL_DB_PORT,
+            username: process.env.LOCAL_DB_USERNAME,
+            password: process.env.LOCAL_DB_PASSWORD,
+            database: process.env.LOCAL_DB_NAME,
             define: {
                 timestamps: true, 
                 underscored: true,
