@@ -66,7 +66,6 @@ const findAllMoviesByGenre = async (genreId) => {
     return data
 }
 
-
 module.exports = {
     findAllMovies,
     createMovie,
